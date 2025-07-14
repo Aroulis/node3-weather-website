@@ -33,7 +33,7 @@ const forecast = (latitude, longtitude, callback) => {
         } else if (body.error) {
             callback('Unable to find location or missing latitude and longtitude', undefined)
         } else {
-            callback(undefined, 'Weather is: ' + body.current.weather_descriptions[0] + ' It is currently: ' + body.current.temperature + '. It feels like: ' + body.current.feelslike
+            callback(undefined, 'Weather is: ' + body.current.weather_descriptions[0] + '. It is currently: ' + body.current.temperature + '. It feels like: ' + body.current.feelslike + ' and the humidity is: ' + body.current.humidity + '.'
             )
         }
 
